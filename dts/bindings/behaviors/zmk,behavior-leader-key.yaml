@@ -1,27 +1,14 @@
 # Copyright (c) 2024 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-description: Leader key behavior
+# dts/bindings/zmk,behavior-custom-random.yaml
+description: Custom Random Number String Generator
 
-compatible: "zmk,behavior-leader-key"
+compatible: "zmk,behavior-custom-random"
 
-include: zero_param.yaml
+include: behavior-cells.yaml
 
 properties:
-  ignore-keys:
-    type: array
-    description: |
-      List of key codes that are passed through without being considered when
-      checking for leader key sequences.
-    default: []
-
-child-binding:
-  description: "A leader sequence"
-
-  properties:
-    bindings:
-      type: phandle-array
-      required: true
-    sequence:
-      type: array
-      required: true
+  bindings:
+    type: int
+    const: 2
