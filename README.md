@@ -50,7 +50,7 @@ manifest:
       import: app/west.yml
 
     - name: zmk-rng-behavior                # ← add this
-      remote: yourname
+      remote: mikel247
       revision: main
 
   self:
