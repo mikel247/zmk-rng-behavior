@@ -10,12 +10,7 @@ config ZMK_BEHAVIOR_RNG_TYPER
         - Full raw 32-bit random integers
         - Random 16-character strings with selectable charset
 
-config ZMK_RNG_TYPER_WAIT_MS
-    int "Delay in ms between key events when typing RNG output"
-    depends on ZMK_BEHAVIOR_RNG_TYPER
-    default 30
-    help
-      Time in milliseconds to sleep between each key press/release event.
-      Matches ZMK's macro default (CONFIG_ZMK_MACRO_DEFAULT_WAIT_MS = 30).
-      Increase to 50+ if characters are being dropped on lossy BLE connections.
-      Decrease to 15 if you find the typing noticeably slow (e.g. 16-char strings).
+      Key timing uses CONFIG_ZMK_MACRO_DEFAULT_TAP_MS and
+      CONFIG_ZMK_MACRO_DEFAULT_WAIT_MS (both default 30ms), the same
+      values used by ZMK macros. Adjust those in your .conf to change
+      typing speed for all macros and this behavior together.
