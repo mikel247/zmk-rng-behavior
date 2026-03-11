@@ -1,5 +1,0 @@
-name: zmk-behavior-random
-build:
-  cmake: .
-  settings:
-    dts_root: .
