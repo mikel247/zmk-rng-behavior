@@ -54,8 +54,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: yourname                        # ← change this
-      url-base: https://github.com/yourname
+    - name: mikel247                       
+      url-base: https://github.com/mikel247 
 
   projects:
     - name: zmk
@@ -63,8 +63,8 @@ manifest:
       revision: main
       import: app/west.yml
 
-    - name: zmk-rng-behavior                # ← add this
-      remote: yourname
+    - name: zmk-rng-behavior                
+      remote: mikel247
       revision: main
 
   self:
