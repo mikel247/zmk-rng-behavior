@@ -10,7 +10,9 @@ config ZMK_BEHAVIOR_RNG_TYPER
         - Full raw 32-bit random integers
         - Random 16-character strings with selectable charset
 
-      Key timing uses CONFIG_ZMK_MACRO_DEFAULT_TAP_MS and
-      CONFIG_ZMK_MACRO_DEFAULT_WAIT_MS (both default 30ms), the same
-      values used by ZMK macros. Adjust those in your .conf to change
-      typing speed for all macros and this behavior together.
+      Key timing follows CONFIG_ZMK_MACRO_DEFAULT_TAP_MS and
+      CONFIG_ZMK_MACRO_DEFAULT_WAIT_MS (both default 30ms).
+
+      IMPORTANT: The default behavior queue size (CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=64)
+      is too small for 16-char strings. Add to your .conf:
+        CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=128
